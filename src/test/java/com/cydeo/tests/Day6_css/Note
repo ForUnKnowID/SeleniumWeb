@@ -1,0 +1,7 @@
+
+
+CSS
+1. css can not
+^ --> start with
+$ --> ending with
+* --> contains, look for anypart of the value (contains)

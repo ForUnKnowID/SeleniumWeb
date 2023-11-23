@@ -1,0 +1,24 @@
+Locators in the selenium
+
+1 id -- id is unique
+
+2 name -- if we can use id or it is dynamic,
+          we look for the name.
+          name locator is not dynamic 99.99% time.
+          name can be duplicate
+3 tagName-- if there is no
+
+
+4 className
+
+
+5 linkText
+
+
+6 PartialLinkText
+
+
+7 xPath
+
+
+8 CSS

@@ -1,0 +1,3 @@
+     I use Alert class to handle the js popups
+     Alert alert = driver.switchTo().alert();
+     alert.accept();  alert.dismiss(); alert.senkeys("")   alert.getText();

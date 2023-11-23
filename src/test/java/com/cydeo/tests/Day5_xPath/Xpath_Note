@@ -1,0 +1,21 @@
+Xpath
+
+
+ 1 absulote Xpath
+     // // //  get the location by parent to the child
+
+// button[@onclick='button1()']
+
+//button[text()='Button']
+
+//button[contains(text(),'ton 1')]
+//a[contains(text(),'Dynamic')]
+
+go amazon
+search for selenium
+click search button
+verify 1-48 of 304 results for selenium
+
+//div[@class='a-section a-spacing-small a-spacing-top-small']
+*
+
