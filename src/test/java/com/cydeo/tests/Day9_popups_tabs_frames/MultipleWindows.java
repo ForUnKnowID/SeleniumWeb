@@ -19,7 +19,7 @@ public class MultipleWindows {
 
 @Test
 public void test1(){
-        driver.get("https://practice.cydeo.com/windows");
+    driver.get("https://practice.cydeo.com/windows");
     System.out.println("Title before new window "+driver.getTitle());
     driver.findElement(By.linkText("Click Here")).click();
     System.out.println("Title after new window  = " + driver.getTitle());
