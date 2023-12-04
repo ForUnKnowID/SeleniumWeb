@@ -5,3 +5,10 @@ CSS
 ^ --> start with
 $ --> ending with
 * --> contains, look for anypart of the value (contains)
+
+. -> class
+# -> class
+button[onclick='button1()']
+[name='button6']
+button[id^='button']-->starts with
+button[id*=ring]
