@@ -9,23 +9,30 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class implicitWaitExample {
+public class selfTest {
+
 
     WebDriver driver;
     @BeforeMethod
     public void setUp(){
-        driver = WebDriverFactory.getDriver("chrome");
+        driver= WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
+
+
+    // test 4
     @Test
     public void test1() throws InterruptedException {
         driver.get("https://practice.cydeo.com/dynamic_loading/4");
+        System.out.println(driver.findElement(By.xpath("//div[@id='finish']")).getText());
+    }
 
-        Thread.sleep(5000);
-        driver.findElement(By.id("username")).sendKeys("Mike Smith");
+    // test 3
+    @Test
+    public void test2(){
+        driver.get("https://practice.cydeo.com/dynamic_loading/3");
 
     }
 
