@@ -43,6 +43,16 @@ public class JavaScriptDemo {
         Actions j = new Actions(driver);
     }
 
+    @Test
+    public void scrollDownAndUp() throws InterruptedException {
+      //  driver.get("https://practice.cydeo.com/infinite_scroll");
+        driver.get("https://Amazon.com");
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollBy(0,250)");
+        Thread.sleep(3000);
+
+    }
+
 
     @AfterMethod
     public void tearDown(){
