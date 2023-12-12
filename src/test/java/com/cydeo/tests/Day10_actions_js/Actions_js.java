@@ -60,7 +60,10 @@ public class Actions_js {
 //        actions.dragAndDrop(source,target).perform();
 //        Thread.sleep(2000);
         String a = driver.findElement(By.xpath("//div[@data-role='droptarget']")).getText();
+
         System.out.println(a);
+
+
     }
 
 
