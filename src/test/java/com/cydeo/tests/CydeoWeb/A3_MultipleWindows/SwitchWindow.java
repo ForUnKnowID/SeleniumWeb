@@ -1,4 +1,4 @@
-package com.cydeo.tests.Day8_types_of_elements_2.PersonTask;
+package com.cydeo.tests.CydeoWeb.A3_MultipleWindows;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.Set;
 
 public class SwitchWindow {
     WebDriver driver;
