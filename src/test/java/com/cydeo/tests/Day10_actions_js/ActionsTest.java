@@ -10,6 +10,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class ActionsTest {
 
 
@@ -19,6 +21,7 @@ public class ActionsTest {
     public void setUp(){
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
+
     }
 
 
@@ -42,6 +45,49 @@ public class ActionsTest {
         Assert.assertTrue(viewLink.isDisplayed(),"Verify the viewLink is displayed or not");
 
 
+
+    }
+
+    @Test
+    public void dragAndDrop() throws InterruptedException {
+        driver.get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+
+        WebElement source = driver.findElement(By.xpath("//div[@id='draggable'][@data-role='draggable']"));
+        WebElement target = driver.findElement(By.xpath("//div[@id='droptarget'][@class='k-header']"));
+        Actions actions = new Actions(driver);
+        driver.findElement(By.xpath("//*[.='Accept Cookies']")).click();
+        Thread.sleep(2000);
+        actions.dragAndDrop(source,target).perform();
+
+    }
+
+    @Test
+    public void dragAndDropChaining() throws InterruptedException {
+        driver.get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+
+        WebElement source = driver.findElement(By.xpath("//div[@id='draggable'][@data-role='draggable']"));
+        WebElement target = driver.findElement(By.xpath("//div[@id='droptarget'][@class='k-header']"));
+        Actions actions = new Actions(driver);
+        List<WebElement> acceptAndClose = driver.findElements(By.xpath("//*[.='Accept and Close']"));
+        List<WebElement> acceptCookies = driver.findElements(By.xpath("//*[.='Accept Cookies']"));
+        Thread.sleep(1000);
+
+        if (acceptAndClose.size()>0){
+            acceptAndClose.get(0).click();
+        }else if (acceptCookies.size()>0){
+            acceptCookies.get(0).click();
+        }
+
+
+        driver.findElement(By.xpath("//*[.='Accept Cookies']")).click();
+
+        Thread.sleep(3000);
+
+        actions.moveToElement(source).clickAndHold().moveToElement(target).pause(2000).release().perform();
+
+        String text = driver.findElement(By.xpath("//div[contains(text(),'You did great!')]")).getText();
+
+        Assert.assertTrue(text.equals("You did great!"));
 
     }
 
