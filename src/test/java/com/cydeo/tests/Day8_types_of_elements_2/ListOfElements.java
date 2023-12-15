@@ -21,13 +21,12 @@ WebDriver driver;
     }
 
 
-
     @Test
     public void test1(){
 
         driver.get("https://practice.cydeo.com/multiple_buttons");
 
-         List<WebElement> button = driver.findElements(By.tagName("button"));
+        List<WebElement> button = driver.findElements(By.tagName("button"));
 
         System.out.println("button.size() = " + button.size());
 
@@ -35,7 +34,7 @@ WebDriver driver;
 
         // iter
         for (WebElement webElement : button) {
-           // System.out.println("webElement.getText() = " + webElement.getText());
+            // System.out.println("webElement.getText() = " + webElement.getText());
             System.out.println(webElement.isDisplayed());
             Assert.assertTrue(webElement.isDisplayed(),"verify buttons are displayed");
         }
@@ -54,8 +53,6 @@ WebDriver driver;
         List<WebElement> buttons = driver.findElements(By.tagName("buttonibivivi"));
         System.out.println(buttons.size());
     }
-
-
 
 
     @AfterMethod

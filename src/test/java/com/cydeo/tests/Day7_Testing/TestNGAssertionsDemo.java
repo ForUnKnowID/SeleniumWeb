@@ -34,7 +34,9 @@ public class TestNGAssertionsDemo {
         String expectedTitle = "Cyb";
         String actualTitle="Cybertek";
 
+
         Assert.assertTrue(expectedTitle.contains(actualTitle),"Test 2 (The title are equal)");
+        //Assert.assertTrue(actualTitle.startsWith(expectedTitle),"Verify title starts with Cyd");
     }
 
     @Test
@@ -51,6 +53,8 @@ public class TestNGAssertionsDemo {
 
     @Test
     public void test6(){
+
+        Assert.assertNotEquals("One","one");
 
     }
 

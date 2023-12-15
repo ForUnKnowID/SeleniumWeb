@@ -15,6 +15,7 @@ public class DisplayedDemo {
         driver.get("https://practice.cydeo.com/dynamic_loading/1");
 
         WebElement usernameInput = driver.findElement(By.id("username"));
+
         System.out.println(usernameInput.isDisplayed());
         driver.close();
     }
