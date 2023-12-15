@@ -1,1 +1,40 @@
 Upload File
+
+
+File Download
+Using selenium we can not verify the content of the download files. we can got to some websites. click on the links to download
+files using selenium. But we can not verify the content. Using java + other dependencies we can verify if the file exit
+
+Action
+//Actions --> class that contains all the user interactions
+// how to create actions objet --> passing driver as a constructor
+
+moveToElement()
+// MoveToElement --> move your mouse to web element (hover over)
+
+clickAndHold()
+
+release()
+
+perform()
+// Perform() --> move your mouse to webElement (hover over)
+https://demos.telerik.com/kendo-ui/dragdrop/index
+
+Scroll Down with JS
+JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollBy(0,500)");
+
+Scroll Up with JS
+JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollBy(0,-500)");
+
+Try to type
+JavascriptExecutor jse = (JavascriptExecutor) driver;
+        String text = "Hello Disable input";
+        jse.executeScript("arguments[0].setAttribute('value','"+text+"')",inputBox);
+
+Click with JS
+ JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].click",dropDown);
+
+Upload The File
