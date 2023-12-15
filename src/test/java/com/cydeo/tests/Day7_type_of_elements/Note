@@ -1,0 +1,73 @@
+Class Notes-7
+
+Assertions
+
+Assert --> this is the class in testNg, it has methods used to do assertions like when we compare values.
+
+in testng, if assertion fails, rest of the method will NOT execute, it will be ignored/skipped.
+
+If your code fail in one @Test annotation, it will not effect other @Test s, each of them working independently.
+
+Note: whether your testcase fail or not, your before and after method will executed ALWAYS. so even if you code failes, you can quit from driver, close browser.
+
+4 types of assertion
+
+Assert.assertEquals(actual,expected)--> it checks two value same or not
+
+Assert.assertTrue(condition) --> it checks whether condition return true or not
+
+Assert.assertFalse(condition) --> it verifies condition return false or not
+
+Assert.assertNotEquals(actual,expected) --> verifies that two vvalues are NOT equal to each other
+
+
+we can add message to all of our assertions to see what we are checking
+
+Assert.assertTrue(condition,message);
+Assert.assertEquals(actual,expected,message);
+=========================================
+Radio Buttons
+
+Radio button is a type of elements in which only one option can be selected among group of options (Example: Gender - Male,Female,Other)
+
+Based on the requirements you might or might not have default option selected.
+
+//how to check radio button selected or not ?
+isSelected() --> if radio buttons selected it will return true, if not it will return false.
+
+//how to select radio button ?
+we can use click() method for selecting radio buttons
+
+//how can we check if the webelement is enabled ?
+isEnabled()--> method that reutrns true if the button enabled, if not it returns false.
+
+
+When we try to interact with disabled elements 2 things can happen:
+1.no action will be happen and code will not fail, not complain
+2.no action will be happen but we can get ElementNotInteractableException: element not interactable
+========================================
+Checkboxes
+
+Checkboxes are type of input elements which can be selected or unselected.
+When we have group of checkboxes selecting or unselecting one checkbox does NOT affect on the selection of the other one.
+
+Just like a radio buttons we use isSelected() method to check checkboxes are selected or not.
+to select or unselect the checkboxes we use click() method.
+
+========================================
+
+getAttribute("attributeName")
+//when we pass valid attribute naem to getAttribute method, it will return the value of that attribute.
+
+//if you pass non existing attribute it will return null to you.
+
+//"outerHTML" returns full html of that element
+
+Example:
+<button class="btn btn-primary" onclick="button2()" name="button2">Button 2</button>
+
+When we need to get text of the web element
+1.getText();
+2.getAttribute("value"); (inputboxes)
+3.getAttribute("innerHTML"); --> it will work certain cases
+4.getAttribute("outerHTML"); --> manipulate and verify(contains)
