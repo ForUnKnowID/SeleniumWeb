@@ -1,4 +1,4 @@
-package com.cydeo.tests.Day10_file_upload;
+package com.cydeo.tests.CydeoWeb.Other;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -27,6 +27,18 @@ public class HomeWork {
 
 
 
+    @Test
+    public void test1(){
+        driver.get("https://practice.cydeo.com/hovers");
+        Actions actions = new Actions(driver);
+        List<WebElement> allElement = driver.findElements(By.xpath("(//div[@class='figure'])"));
+        actions.moveToElement(driver.findElement(By.xpath("(//div[@class='figure'])[1]"))).perform();
+
+
+        for (int i = 0; i < allElement.size(); i++) {
+            
+        }
+    }
 
 
 
