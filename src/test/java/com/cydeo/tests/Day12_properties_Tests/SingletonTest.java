@@ -1,5 +1,8 @@
 package com.cydeo.tests.Day12_properties_Tests;
 
+import com.cydeo.utilities.Driver;
+import com.cydeo.utilities.WebDriverFactory;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class SingletonTest {
@@ -15,6 +18,19 @@ public class SingletonTest {
         System.out.println("s2 = " + s2);
     }
 
+
+    @Test
+    public void test2(){
+        WebDriver driver = Driver.get();
+        driver.get("https://www.google.com");
+
+    }
+
+    @Test
+    public void test3(){
+        WebDriver driver = Driver.get();
+        driver.get("https://www.amazon.com");
+    }
 
 
 }

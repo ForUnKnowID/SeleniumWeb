@@ -13,24 +13,12 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class LoginTest {
-
-    WebDriver driver;
-
-    @BeforeMethod
-    public void setUp(){
-        driver = Driver.get();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    }
-
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(2000);
-        driver.quit();
-    }
+public class LoginTest extends TestBase{
 
 
+
+
+    
     @Test
     public void OpenBrowserWithConf(){
         WebDriver driver = WebDriverFactory.getDriver(ConfigurationReader.get("browser"));

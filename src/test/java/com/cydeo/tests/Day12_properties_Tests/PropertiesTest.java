@@ -12,12 +12,15 @@ public class PropertiesTest {
     @Test
     public void test1(){
 
-    String browserType = ConfigurationReader.get("browser");
-        WebDriver driver = WebDriverFactory.getDriver(browserType);
+        String browserType = ConfigurationReader.get("browser");
+
         System.out.println("browserType = " + browserType);
 
         String url = ConfigurationReader.get("url");
+
         System.out.println("url = " + url);
+
+
 
 
     }
@@ -33,7 +36,8 @@ public class PropertiesTest {
 
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys(userName);
         driver.findElement(By.xpath("//input[@type='password']")).sendKeys(userPassword+Keys.ENTER);
-        driver.close();
+
+
 
 
     }
