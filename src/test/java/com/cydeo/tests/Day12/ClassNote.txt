@@ -1,0 +1,7 @@
+
+
+what is Automation Framework?
+
+Automation framework is integrated System, organization of
+package,files,classes tools in a way that it makes writing and maintaining automated tests easy
+
