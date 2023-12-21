@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Test_multiple_buttons {
@@ -27,12 +28,12 @@ public class Test_multiple_buttons {
     }
 
 
+
+
     // Positive test making sure all the Buttons are clickable
     @Test
     public void Test1(){
-
         List<WebElement> allTheBtn = driver.findElements(By.xpath("//button"));
-
         for (int i = 1; i <= allTheBtn.size(); i++) {
             System.out.println(driver.findElement(By.xpath("//button["+i+"]")).getText());
             driver.findElement(By.xpath("//button["+i+"]")).click();
@@ -44,16 +45,24 @@ public class Test_multiple_buttons {
     //Making sure while click the buttons the messages are showing correctly
     @Test
     public void Test2(){
+        driver.get("https://practice.cydeo.com/multiple_buttons");
+        List<WebElement> allBtn = driver.findElements(By.xpath("//button"));
+        List<String> eText= new ArrayList<>();
+
+        for (int i = 1; i < eText.size(); i++) {
+            eText.add(driver.findElement(By.xpath("//p[@id='result']")).getText());
+            System.out.println(eText.get(i));
+        }
+
+        for (int i = 1 ; i <= allBtn.size(); i++) {
+            driver.findElement(By.xpath("//button["+i+"]")).click();
+
+
+
+        }
+
 
     }
-
-
-
-
-
-
-
-
 
 
     @AfterMethod

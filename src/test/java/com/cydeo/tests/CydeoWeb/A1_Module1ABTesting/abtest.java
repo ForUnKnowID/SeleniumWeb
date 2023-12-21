@@ -23,6 +23,7 @@ public class abtest {
 
 
     // Locate All The Web Elements and get there names
+
     @Test
     public void locateWebElement(){
         driver.get("https://practice.cydeo.com/abtest");
