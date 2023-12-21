@@ -1,0 +1,6 @@
+What is singleton
+
+What is configuration.properties
+What is configuration reader
+Why we need them
+
