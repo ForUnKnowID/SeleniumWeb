@@ -11,9 +11,9 @@ public class AnotherLoginTest extends TestBase{
 
     @Test
     public void test1(){
-        driver.get(ConfigurationReader.get("url"));
-        String username  = ConfigurationReader.get("driver_username");
-        String passsword  = ConfigurationReader.get("driver_password");
+        driver.get(ConfigurationReader.getProperty("url"));
+        String username  = ConfigurationReader.getProperty("driver_username");
+        String passsword  = ConfigurationReader.getProperty("driver_password");
 
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys(username+ Keys.TAB+passsword+Keys.ENTER);
 

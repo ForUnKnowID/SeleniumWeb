@@ -21,12 +21,12 @@ public class LoginTest extends TestBase{
     
     @Test
     public void OpenBrowserWithConf(){
-        WebDriver driver = WebDriverFactory.getDriver(ConfigurationReader.get("browser"));
-        driver.get(ConfigurationReader.get("url"));
-        String userName = ConfigurationReader.get("driver_username");
+        WebDriver driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty("browser"));
+        driver.get(ConfigurationReader.getProperty("url"));
+        String userName = ConfigurationReader.getProperty("driver_username");
 
 
-        String userPassword = ConfigurationReader.get("driver_password");
+        String userPassword = ConfigurationReader.getProperty("driver_password");
 
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys(userName);
         driver.findElement(By.xpath("//input[@type='password']")).sendKeys(userPassword+ Keys.ENTER);
