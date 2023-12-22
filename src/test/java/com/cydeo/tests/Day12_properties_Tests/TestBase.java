@@ -1,5 +1,6 @@
 package com.cydeo.tests.Day12_properties_Tests;
 
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -23,6 +24,7 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         actions = new Actions(driver);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.get(ConfigurationReader.getProperty("url"));
     }
 
     @AfterMethod
