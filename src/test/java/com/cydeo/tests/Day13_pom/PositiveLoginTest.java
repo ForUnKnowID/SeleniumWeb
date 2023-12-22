@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 public class PositiveLoginTest extends TestBase {
 
-
     @Test
     public void loginAsDriver(){
 
@@ -34,14 +33,32 @@ public class PositiveLoginTest extends TestBase {
         String username = ConfigurationReader.getProperty("storemanager_username");
         String password = ConfigurationReader.getProperty("storemanager_password");
 
-        loginPage.userNameInput.sendKeys(username);
-        loginPage.passwordInput.sendKeys(password);
-        loginPage.loginBtn.click();
+//        loginPage.userNameInput.sendKeys(username);
+//        loginPage.passwordInput.sendKeys(password);
+//        loginPage.loginBtn.click();
 
+        loginPage.login(username,password);
         Assert.assertEquals(Driver.getDriver().getCurrentUrl(),"https://qa1.vytrack.com/");
 
 
     }
+
+    @Test
+    public void loginAsStoreManager2(){
+
+        LoginPage loginPage = new LoginPage();
+
+        loginPage.loginAsStoreManager();
+
+        Assert.assertEquals(Driver.getDriver().getCurrentUrl(),"https://qa1.vytrack.com/");
+
+
+
+    }
+
+
+
+
 
 
 }
