@@ -12,11 +12,11 @@ public class PropertiesTest {
     @Test
     public void test1(){
 
-        String browserType = ConfigurationReader.get("browser");
+        String browserType = ConfigurationReader.getProperty("browser");
 
         System.out.println("browserType = " + browserType);
 
-        String url = ConfigurationReader.get("url");
+        String url = ConfigurationReader.getProperty("url");
 
         System.out.println("url = " + url);
 
@@ -27,12 +27,12 @@ public class PropertiesTest {
 
     @Test
     public void OpenBrowserWithConf(){
-        WebDriver driver = WebDriverFactory.getDriver(ConfigurationReader.get("browser"));
-        driver.get(ConfigurationReader.get("url"));
-        String userName = ConfigurationReader.get("driver_username");
+        WebDriver driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty("browser"));
+        driver.get(ConfigurationReader.getProperty("url"));
+        String userName = ConfigurationReader.getProperty("driver_username");
 
 
-        String userPassword = ConfigurationReader.get("driver_password");
+        String userPassword = ConfigurationReader.getProperty("driver_password");
 
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys(userName);
         driver.findElement(By.xpath("//input[@type='password']")).sendKeys(userPassword+Keys.ENTER);

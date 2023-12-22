@@ -21,14 +21,14 @@ public class SingletonTest {
 
     @Test
     public void test2(){
-        WebDriver driver = Driver.get();
+        WebDriver driver = Driver.getDriver();
         driver.get("https://www.google.com");
 
     }
 
     @Test
     public void test3(){
-        WebDriver driver = Driver.get();
+        WebDriver driver = Driver.getDriver();
         driver.get("https://www.amazon.com");
     }
 
