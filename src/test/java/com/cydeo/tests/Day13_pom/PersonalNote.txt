@@ -9,4 +9,4 @@ consider each web page of an application as a class file.
 
 It called POM is it stories all the web elements,
 it can help reduce code duplication and improves the test case
-It consider each web page as a class file
+It considers each web page as a class file
