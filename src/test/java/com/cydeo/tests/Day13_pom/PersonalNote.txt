@@ -1,0 +1,12 @@
+What is Page Object model?
+
+Page Object Model, also known as POM,
+is a design pattern in Selenium that creates
+an object repository for storing all web elements.
+It helps reduce code duplication and improves test case
+maintenance. In Page Object Model,
+consider each web page of an application as a class file.
+
+It called POM is it stories all the web elements,
+it can help reduce code duplication and improves the test case
+It considers each web page as a class file
