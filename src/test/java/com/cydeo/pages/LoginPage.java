@@ -22,17 +22,27 @@ public class LoginPage {
     })
     public WebElement userNameInput ;
 
-    @FindBy(id = "prependedInput2")
+    @FindBy(name = "_password")
     public WebElement passwordInput;
 
     @FindBy(id="_submit")
     public WebElement loginBtn;
+
+    public void loginAsDriver(){
+        String username = ConfigurationReader.getProperty("driver_username");
+        String password = ConfigurationReader.getProperty("driver_password");
+
+        userNameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginBtn.click();
+    }
 
     public void login(String username,String password){
         userNameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         loginBtn.click();
     }
+
 
     public void loginAsStoreManager(){
         String username = ConfigurationReader.getProperty("storemanager_username");
@@ -42,6 +52,7 @@ public class LoginPage {
         passwordInput.sendKeys(password);
         loginBtn.click();
     }
+
 
 
 }
