@@ -1,5 +1,7 @@
 package com.cydeo.tests.Day13_pom;
 
+import com.cydeo.pages.CalendarEventsPage;
+import com.cydeo.pages.CreateCalendarEventsPage;
 import com.cydeo.pages.DashboardPage;
 import com.cydeo.pages.LoginPage;
 import com.cydeo.tests.Day12_properties_Tests.TestBase;
@@ -24,6 +26,10 @@ public class PageSubtitleTest extends TestBase {
             String actualSubtitle = dashboardPage.getPageSubTitle();
 
             Assert.assertEquals(actualSubtitle,expectedSubTitle,"verity Subtitle");
+
+            dashboardPage.navigateToModule("Activities","Calendar Events");
+
+            CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
 
     }
 }
