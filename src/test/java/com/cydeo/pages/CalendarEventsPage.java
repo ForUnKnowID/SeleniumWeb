@@ -7,11 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CalendarEventsPage extends TestBase {
+public class CalendarEventsPage extends BasePage {
     public CalendarEventsPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(css = "[title='Create Calendar event']")
+    @FindBy(xpath = "//a[@class='btn main-group btn-primary pull-right ']")
     public WebElement createCalendarEvent;
 }

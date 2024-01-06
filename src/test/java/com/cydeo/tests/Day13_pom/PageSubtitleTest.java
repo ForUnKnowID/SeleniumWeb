@@ -5,6 +5,7 @@ import com.cydeo.pages.CreateCalendarEventsPage;
 import com.cydeo.pages.DashboardPage;
 import com.cydeo.pages.LoginPage;
 import com.cydeo.tests.Day12_properties_Tests.TestBase;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -30,6 +31,8 @@ public class PageSubtitleTest extends TestBase {
             dashboardPage.navigateToModule("Activities","Calendar Events");
 
             CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
+            BrowserUtils.waitFor(2);
+            Assert.assertEquals(calendarEventsPage.pageSubTitle.getText(),"Quick Launchpad");
 
     }
 }
