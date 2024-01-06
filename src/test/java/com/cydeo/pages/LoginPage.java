@@ -16,10 +16,7 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBys({
-            @FindBy(id="prependedInput"),
-            @FindBy(name="_username")
-    })
+    @FindBy(name="_username")
     public WebElement userNameInput ;
 
     @FindBy(name = "_password")
