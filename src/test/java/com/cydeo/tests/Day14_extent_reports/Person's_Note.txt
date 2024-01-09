@@ -1,0 +1,2 @@
+How to take screen shot in Selenium
+A ->  There is a interface from selenium called TakeScrennshot and it has a getScreenShotAs method
