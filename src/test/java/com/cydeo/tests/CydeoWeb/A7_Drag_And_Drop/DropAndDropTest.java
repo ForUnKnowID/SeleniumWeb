@@ -35,7 +35,7 @@ public class DropAndDropTest {
 
         // Locate the A locator with Text
         String ALocationText = driver.findElement(By.xpath("(//header)[1]")).getText();
-        // print out
+        // print out the result of header
         System.out.println("ALocationText = " + ALocationText);
         // locate the A
         WebElement Aelement = driver.findElement(By.id("column-a"));
