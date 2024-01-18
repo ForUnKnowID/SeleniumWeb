@@ -25,3 +25,5 @@ Copy excel file
 8.click paste
 9.click ok
 10. you will see the file under resources
+
+
