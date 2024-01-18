@@ -1,0 +1,15 @@
+Q-> Why driver will be Singleton ?
+A- > Because using same Object
+
+
+What is TestBast -> Contains properties and actions common
+to all tests
+
+What is BasePage -> Template page object for all pages
+
+
+Type of Testing -> (UI -> WebDriver)
+                   (Back End  JDBC)
+                   (API RestAssured)
+
+
